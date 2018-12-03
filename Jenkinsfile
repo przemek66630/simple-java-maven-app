@@ -23,7 +23,7 @@ pipeline {
         }
 	stage('MyStage') { 
             steps {
-                sh echo "this is my custom stage"
+                sh 'echo "this is my custom stage"'
             }
         }
 	stage('Deliver') { 
