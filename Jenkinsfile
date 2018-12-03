@@ -21,7 +21,14 @@ pipeline {
                 }
             }
         }
-	stage('Deliver') { 
+	stage('MyStage') { 
+            steps {
+                sh '''
+		echo "this is my custom stage"
+		dir
+		'''
+            }
+        }stage('Deliver') { 
             steps {
                 sh './jenkins/scripts/deliver.sh' 
             }
