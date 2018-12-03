@@ -24,6 +24,7 @@ pipeline {
 	stage('MyStage') { 
             steps {
                 sh 'echo "this is my custom stage"'
+		sh 'dir'
             }
         }
 	stage('Deliver') { 
